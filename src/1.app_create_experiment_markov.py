@@ -20,7 +20,7 @@ patient_table = pd.DataFrame()
 
 for patient_id in range(how_many):
     category = categories[rng.choice(list(categories.keys()))]
-    config_path = f"byICU\\{category}"
+    config_path = f"markov\\{category}"
 
     sensors_data = generate_sensors_data(sample_size, patient_id, rng, config_path)
     sensors_data.to_csv(f"{OUTPUT_PATH}\\dataframe\\patient_{patient_id}.csv")
