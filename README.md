@@ -69,7 +69,7 @@ cd xpnsa
 ### Usage
 The files inside the src/ folder are numbered according to the order in which they must be run.
 1. The patient profiles are generated using markov chains. 
-    - These chains were developed in the [markov-sensors](https://github.com/rdinizcal/markov-sensors) project, where the author clustered data from real patients based on their health risk probability as [high_risk_0, medium_risk_0, low_risk, medium_risk_1, high_risk_1]. More information can be found in his repository.
+    - These chains were developed in the [markov-sensors](https://github.com/rdinizcal/markov-sensors) project, where the author clustered data from real patients based on their health risk probability as [`high_risk_0`, `medium_risk_0`, `low_risk`, `medium_risk_1`, `high_risk_1`]. More information can be found in his repository.
     - The algorithm randomly selects a risk class and generates random numbers to evaluate the next state.
     - After the new state is selected, a value whithin that state is randomly picked.
     - this process is executed according to the sample_size variable and stored in a csv file
