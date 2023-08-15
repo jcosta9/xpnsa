@@ -19,27 +19,27 @@ Complex relations between cybernetic and physical components of a cyber-physical
 
 The repository is organized as follows:
 
-|- `data/`: Includes sample and synthetic data that can be used in the experiments. New files can be created using the scripts inside the `/src` folder.
-|- `files/`: Folder containing configuration and other information files
-|   |-- `config/`: Configuration files stored in yaml format
-|   |   |-- `markov/`: Markov chains for patient profile generation
-|   |   |-- `config.yaml`: General configurations file
-|   |   |-- `data_process.yaml`: Config file for processing data
-|   |   |-- `final_features_temperature.yaml`: Set of features selected for the final analysis
-|   |   |-- `ome_simulation_config.yaml`: Configuration file for running the BSN experiments using the OpenModelica API
-|- `models/`: BSN Modelica models used to reproduce the experiments.
-|- `src/`: Contains the source code for the project.
-|   |-- `config/`: Module responsible for reading config files
-|   |-- `experiment/`: Utility functions and classes for the patient profile generation
-|   |-- `negativeSelection/`: Several implementations of the Negative Selection Algorithm and utility functions
-|   |-- `OpenModelica/`: Module responsible for handling OpenModelica API operations
-|   |-- `preprocessing/`: Module for processing data for the analysis
-|   |-- `1. app_create_experiment_markov.py`: Script that generates patient profiles using the Markov Chains stored in `files/config/markov`
-|   |-- `2. data_pipeline.py`: Script responsible for: (i) running the OpenModelica simulations using the generated patient profiles, (ii) processing the resulting data in order to create the features that will be further analyzed.
-|   |-- `3. Temperature_sanity_check.ipynb`: Script that verifies if the features were generated correctly
-|   |-- `4. temperature_eda.ipynb`: Analysis of the generated features for ranking and selection of the most relevant
-|   |-- `5. Negative Selection.ipynb`: Execution of the Negative Selection Algorithm to create the nonself detectors 
-|   |-- `6. temperature_ns_result.ipynb`: Analysis of the generated detectors to leverage the explainability of the algorithm
+- `data/`: Includes sample and synthetic data that can be used in the experiments. New files can be created using the scripts inside the `/src` folder.
+- `files/`: Folder containing configuration and other information files
+    - `config/`: Configuration files stored in yaml format
+        - `markov/`: Markov chains for patient profile generation
+        - `config.yaml`: General configurations file
+        - `data_process.yaml`: Config file for processing data
+        - `final_features_temperature.yaml`: Set of features selected for the final analysis
+        - `ome_simulation_config.yaml`: Configuration file for running the BSN experiments using the OpenModelica API
+- `models/`: BSN Modelica models used to reproduce the experiments.
+- `src/`: Contains the source code for the project.
+    - `config/`: Module responsible for reading config files
+    - `experiment/`: Utility functions and classes for the patient profile generation
+    - `negativeSelection/`: Several implementations of the Negative Selection Algorithm and utility functions
+    - `OpenModelica/`: Module responsible for handling OpenModelica API operations
+    - `preprocessing/`: Module for processing data for the analysis
+    - `1. app_create_experiment_markov.py`: Script that generates patient profiles using the Markov Chains stored in `files/config/markov`
+    - `2. data_pipeline.py`: Script responsible for: (i) running the OpenModelica simulations using the generated patient profiles, (ii) processing the resulting data in order to create the features that will be further analyzed.
+    - `3. Temperature_sanity_check.ipynb`: Script that verifies if the features were generated correctly
+    - `4. temperature_eda.ipynb`: Analysis of the generated features for ranking and selection of the most relevant
+    - `5. Negative Selection.ipynb`: Execution of the Negative Selection Algorithm to create the nonself detectors 
+    - `6. temperature_ns_result.ipynb`: Analysis of the generated detectors to leverage the explainability of the algorithm
 
 ## Getting Started
 
